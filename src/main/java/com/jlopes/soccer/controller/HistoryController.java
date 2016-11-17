@@ -1,5 +1,6 @@
 package com.jlopes.soccer.controller;
 
+import org.json.JSONObject;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -23,7 +24,9 @@ public class HistoryController {
 				+ "No Brasil, o futebol é gerido pela Confederação Brasileira de Desportos de Deficientes Visuais - CBDV; internacionalmente, a gestão cabe a Federação Internacional de Esportes para Cegos - IBSA (sigla em inglês)."
 				+ "Atualmente, o esporte no Brasil é patrocinado pela Loterias Caixa.</p>"
 				+ "<p><a href='/home'>Voltar para página inicial</a></p>";
-		return text;
+		JSONObject history = new JSONObject();
+		history.put("history", text);
+		return history.toString();
 	}
 
 }

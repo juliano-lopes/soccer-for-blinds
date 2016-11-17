@@ -1,0 +1,25 @@
+
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+
+
+
+repositories {
+    
+
+mavenCentral()
+
+
+}
+
+dependencies {
+
+testCompile 'junit:junit:4.11'
+// https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-web
+compile group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '1.4.2.RELEASE'
+// https://mvnrepository.com/artifact/org.json/json
+compile group: 'org.json', name: 'json', version: '20070829'
+
+
+}

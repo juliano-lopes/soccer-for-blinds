@@ -1,5 +1,6 @@
 package com.jlopes.soccer.controller;
 
+import org.json.JSONObject;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -12,6 +13,9 @@ public class TeamController {
 				+ "<li>ICB</li>" + "<li>AMC</li>" + "<li>CEIBC</li>"
 				+ "<li>Urece</li>" + "</ul>"
 				+ "<p><a href='/home'>Voltar para página inicial</a></p>";
-		return text;
+		JSONObject team = new JSONObject();
+		team.put("team", text);
+
+		return team.toString();
 	}
 }
